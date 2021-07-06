@@ -14,12 +14,13 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join('tmp', 'caching-dev.txt').exist?
+  if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
+    config.action_controller.enable_fragment_cache_logging = true
 
-    config.cache_store = :memory_store
+    config.cache_store = :redis_cache_store, { path: '/var/run/redis/redis-server.sock', expires_in: 2.hours }
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}",
     }
   else
     config.action_controller.perform_caching = false
@@ -27,8 +28,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  config.active_storage.service = :aws
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -43,15 +43,7 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
-  # Debug mode disables concatenation and preprocessing of assets.
-  # This option may cause significant delays in view rendering with a large
-  # number of complex assets.
-  config.assets.debug = true
-
-  # Suppress logger output for asset requests.
-  config.assets.quiet = true
-
-  # Raises error for missing translations
+  # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
@@ -60,11 +52,11 @@ Rails.application.configure do
 
   routes.default_url_options[:host] = 'greasyfork.local'
   routes.default_url_options[:protocol] = 'http'
-  
-  config.verify_ownership_on_import = false
-  config.userscriptsorg_host = 'http://userscripts.org:8080'
+
   config.enable_detect_locale = true
   config.log_cache_misses = true
 
   config.active_job.queue_adapter = :inline
+
+  config.hosts += %w[greasyfork.local test.greasyfork.org]
 end

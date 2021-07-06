@@ -23,7 +23,6 @@ fi:
       one: "Katso %{count} muu skripti sivustolle %{site}"
       other: "Katso %{count} muuta skriptiä sivustolle %{site}"
     applies_to_all: "Kaikki sivustot"
-    additional_info: "Tekijän kuvaus"
     install: "Asenna tämä skripti"
     install_help: "?"
     install_help_title: "Asennusohje"
@@ -44,16 +43,10 @@ fi:
     delete_update_behaviour_1: "Skripti jää heille muuttumattomana."
     delete_update_behaviour_2: "Heille päivitetään tyhjä skripti. Tämä on sopivaa, kun skriptillä on negatiivinen vaikutus sivustoihin, joilla se suoritetaan."
     delete_permanently_heading: "Pysyvä poisto"
-    delete_permanently_explanation: "Skriptin poistaminen pysyvästi poistaa sen ja kaikki siihen liittyvät tiedot, poislukien foorumikeskustelut ja moderaattoritoimintojen lokin. Pysyvä poisto on pysyvä; edes moderaattorit eivät voi kumota sitä."
-    delete_permanently_request_explanation: "Tämän skriptin pysyvä poistaminen voidaan suorittaa vasta moderaattorin tarkistuksen jälkeen."
-    delete_permanently_confirm: "Haluatko varmasti poistaa skriptisi pysyvästi? Tätä ei voi kumota!"
     delete_permanently_submit: "Pyydä pysyvää poistoa"
     delete_permanently_immediate_submit: "Poista pysyvästi"
-    delete_permanently_notice: "Pyyntö pysyvästä poistosta on tallennettu ja moderaattori tulee tarkistamaan sen."
-    delete_permanently_already_requested: "Pyysit pysyvää poistoa %{datetime}."
     delete_permanently_notice_immediate: "Skripti poistettu pysyvästi."
     cancel_delete_permanently_submit: "Peruuta pyyntö pysyvästä poistosta"
-    cancel_delete_permanently_notice: "Pyyntösi pysyvästä poistosta on peruttu."
     delete_permanently_rejected_locked: "Tämä skripti on lukittu eikä sitä voida poistaa pysyvästi."
     history_title: "%{script_name} - Versiohistoria"
     history_only_code_changes_info: "Tästä skriptistä on versioita, joissa koodia päivitettiin."
@@ -65,9 +58,7 @@ fi:
     feedback_title: "%{script_name} - Palaute"
     feedback_no_discussions_html: "Ei keskusteluja lähetetty vielä. "
     feedback_start_first_discussion_link: "Ole ensimmäinen, joka keskustelee tästä skriptistä."
-    feedback_discussions_heading: "Keskustelut Greasy Forumilla"
     feedback_favoriters_heading: "Suosikkeihin lisänneet"
-    feedback_favoriters_user_list_intro: "Tämän skriptin ovat lisänneet suosikkeihinsa:"
     feedback_no_favoriters: "Kukaan ei ole vielä lisännyt tätä skriptiä suosikkeihinsa."
     feedback_sign_in_to_favorite: "Kirjaudu sisään lisätäksesi suosikkeja."
     stats_title: "%{script_name} - Tilastot"
@@ -80,12 +71,6 @@ fi:
     stats_download_raw_data_html: "Lataa kaikki data: %{links}"
     stats_no_data: "N/A"
     derivatives_title: "%{script_name} - Johdannaiset"
-    derivatives_intro: "Nämä skriptit saattavat perustua skriptiisi (tai omasi saattaa perustua niihin). Jos havaitset koodisi luvatonta käyttöä, raportoi skripti aloittamalla uusi keskustelu siitä."
-    derivatives_namespace_matches_info_html: "Muiden lähettämät skriptit nimiavaruudessa <code>%{namespace}</code>."
-    derivatives_name_matches_info: "Muiden lähettämät skriptit samankaltaisimmilla nimillä skriptisi kanssa:"
-    derivatives_script_html: "%{script_link} (tehnyt %{user_link}), lisenssi: %{license}"
-    derivatives_script_with_code_line_html: "%{script_lines_link} (tehnyt %{user_link}), lisenssi: %{license}"
-    script_lines_link: "%{script_name}, rivit %{start}-%{end}"
     listing_title_all_sites: "Userscriptit kaikille sivustoille"
     listing_description_all_sites: "Userscriptit jotka lisäävät ominaisuuksia ja poistavat bugeja kaikilla sivustoilla"
     listing_title_for_site: "Userscriptit sivustolle %{site}"
@@ -112,7 +97,6 @@ fi:
     listing_updated_feed: "Päivitetyt skriptit"
     listing_none: "(Ei mitään)"
     import: "Tuo skriptejä"
-    new: "Lähetä skripti"
     support_site: "Käy tekijän tukisivustolla"
     support_email: "Lähetä tekijälle sähköpostia saadaksesi tukea."
     contribution_no_amount: "Kiitä %{author}:a tekemällä lahjoitus."
@@ -136,7 +120,6 @@ fi:
     upload_label: "Tai lähetä tiedosto:"
     enable_source_code_editor_label: "Käytä syntaksin korostusta editorissa"
     changelog_note: "Mitä muuttui tässä versiossa?"
-    additional_info_note_html: "Kerro skriptistäsi. %{allowed_elements_link}"
     post_new_script: "Lähetä skripti"
     post_updated_script: "Lähetä uusi versio"
     type_1_html: "Julkinen skripti - skripti kaikkien nähtäväksi ja käytettäväksi."
@@ -158,8 +141,6 @@ fi:
     code_syncing_from_url_html: "Tämän skriptin koodi on asetettu synkronoitumaan kohteesta: %{field}"
     provide_code_syncing_from_url_html: "%{site_name} voi tuoda skriptejä, joita säilytetään jo muualla, kuten versionhallintajärjestelmässä (kuten GitHub), omalla palvelimellasi, tai toisella userscript-sivustolla. Ottaaksesi käyttöön synkronoinnin skriptillesi, syötä URL: %{field}"
     sync_type_intro: "Skripti synkronoidaan:"
-    sync_type_1: "Manuaalisesti - päivitykset tarkistetaan vain, kun käynnistät sen itse"
-    sync_type_2: "Automaattisesti - päivitykset tarkistetaan säännöllisesti"
     sync_failed_info_html: "Viimeisin synkronointiyritys oli %{date}, jolloin lopputulos oli %{error}."
     sync_success_info_html: "Viimeisin onnistunut synkronointi tapahtui %{date}."
     sync_never_succeeded: "Synkronointi ei ole koskaan onnistunut."
@@ -169,7 +150,6 @@ fi:
     additional_info_default_sync_html: "Oletuslisätiedot (kieli on <code>@name</code>)"
     additional_info_localized_sync_html: "Tietylle lokalisaatiolle (<code>@name:XX</code>)"
     sync_url_placeholder: "(URL)"
-    screenshots_explanation: "Enintään %{number} PNG-, GIF- tai JPEG-kuvia, kukin enintään %{size}."
     screenshots_add: "Lisää:"
     screenshots_remove: "Poista"
     replacement_script_explanation: "(Valinnainen) Valitse toinen skripti, joka korvaa tämän skriptin. Käyttäjille päivitetään uusi skripti ja heidät uudelleenohjataan siihen. Syötä korvaavan skriptin URL:"
@@ -184,15 +164,7 @@ fi:
     ok_rating_explanation: "Ihmiset, jotka arvostelivat sen \"OK\"."
     bad_rating_explanation: "Ihmiset, jotka arvostelivat sen \"Huono\"."
     write_your_own_html: "%{post_a_script_link} (tai %{learn_to_write_scripts_link})"
-    post_a_script_link_text: "Lähetä tekemäsi skripti"
     learn_to_write_scripts_link_text: "opi tekemään sellainen"
-    approve_redistribution_explanation: "%{site_name} voi kertoa muille sivustoille, että sallit niiden jakavan skriptiäsi. Skriptillesi valitsemasi lisenssi voi jo sallia tai kieltää tämän."
-    approve_redistribution_use_user_setting: "Käytä tilin oletusarvoa (%{user_setting})"
-    approve_redistribution_use_user_setting_not_set: "ei asetettu"
-    approve_redistribution_true: "Skriptiäni saa jakaa muualla"
-    approve_redistribution_false: "Skriptiäni ei saa jakaa muualla"
-    redistributable_title: "Uudelleen jaettavat skriptit"
-    redistributable_page_description: "Näiden skriptien tekijät ovat erikseen ilmoittaneet sallivansa skriptiensä jakamisen muualla. Skriptien uudelleenjakamiseen saattaa silti kohdistua lisäehtoja; tarkista lisätiedot kunkin skriptin lisenssistä."
     adult_content: "Aikuisille suunnattu sisältö"
     adult_content_self_report: "Tämä skripti sisältää aikuisille suunnattua sisältöä tai on aikuissisältöä sisältävää sivustoa varten."
     adult_content_self_report_explanation: "%{site_name} sallii skriptit, joissa on aikuisille suunnattua sisältöä, mutta ne täytyy merkitä sellaisiksi, jotta käyttäjät voivat valita näkevätkö sisällön."
@@ -211,11 +183,6 @@ fi:
     delete: "Poista skriptijoukko"
     delete_confirmation: "Haluatko varmasti poistaa tämän skriptijoukon?"
     site_default_sort: "(Sivuston oletus)"
-  forum_discussions:
-    listing_no_script_no_reply_html: "%{discussion_link} (aloittanut %{original_poster_link} %{original_post_date})"
-    listing_no_script_with_reply_html: "%{discussion_link} (aloittanut %{original_poster_link} %{original_post_date}), viimeisin kommentti: %{last_commenter_link} %{last_comment_date}"
-    listing_with_script_no_reply_html: "%{script_link}: %{discussion_link} (aloittanut %{original_poster_link} %{original_post_date})"
-    listing_with_script_with_reply_html: "%{script_link}: %{discussion_link} (aloittanut %{original_poster_link} %{original_post_date}), viimeisin kommentti: %{last_commenter_link} %{last_comment_date}"
   home:
     title: "%{site_name} - turvallisia ja hyödyllisiä userscriptejä"
     welcome: "Tervetuloa %{site_name}in, sivustolle userscriptejä varten."
@@ -277,7 +244,6 @@ fi:
       none: "Älä vastaanota sähköposteja keskusteluista skripteistäsi"
       discussion_only: "Vastaanota sähköposteja, kun keskusteluja luodaan skripteistäsi"
       discussion_and_comment: "Vastaanota sähköposteja, kun keskusteluja luodaan skripteistäsi tai niihin lisätään uusia kommentteja"
-      note: "Saatat vastaanottaa muita sähkposteja riippuen foorumin asetuksistasi."
     list_display_html:
       one: "%{user_link} - %{count} skripti"
       other: "%{user_link} - %{count} skriptiä"
@@ -289,10 +255,6 @@ fi:
     show_ads_description: "Tue %{site_name}ia antamalla sen näyttää mainoksia"
     show_sensitive_description: "Näytä aikuisille suunnattua sisältöä sisältävät skriptit"
     preferred_markup_description: "Käytetään uusiin skripteihin ja viesteihin."
-    flattr_username_description_html: "Skriptiesi käyttäjiä pyydetään lahjoittamaan tilillesi <a href=\"https://flattr.com\">Flattrissa</a>."
-    approve_redistribution_explanation: "%{site_name} voi kertoa muille sivustoille, että sallit niiden jakavan skriptiäsi. Skriptillesi valitsemasi lisenssi voi jo sallia tai kieltää tämän. Voit muuttaa tätä asetusta skriptikohtaisesti."
-    approve_redistribution_true: "Skriptiäni saa jakaa muualla"
-    approve_redistribution_false: "Skriptiäni ei saa jakaa muualla"
     greasy_fork_scripts_link:
       one: "Käyttäjällä %{user_name} on myös %{count} skripti Greasy Forkissa."
       other: "Käyttäjällä %{user_name} on myös %{count} skriptiä Greasy Forkissa."
@@ -306,7 +268,6 @@ fi:
       description_localized_html: "Skriptin kuvaus tietyssä lokalisaatiossa, missä XX on <a href=\"http://www.loc.gov/standards/iso639-2/php/code_list.php\">2-kirjaiminen ISO 639-1 -koodi</a> ja YY on vapaaehtoinen <a href=\"https://www.iso.org/obp/ui/#search\">ISO 3166 -maakoodi</a>. Korvaa <code>@description</code>:n, kun käyttäjä käyttää vastaavaa lokalisaatiota."
       namespace_html: "Skriptien hallintaohjelmat käyttävät <code>@namespace</code>:n ja <code>@name</code>:n yhdistelmää havaitakseen, onko skripti jo asennettu. %{site_name} vaatii tämän kentän ja varoittaa, jos sitä muutetaan päivityksen yhteydessä."
       version_html: "Skriptin tietyn version tunniste <a href=\"https://developer.mozilla.org/en/docs/Toolkit_version_format\">Mozillan versioformaatissa</a>. Versio näytetään skriptin tietosivulla. %{site_name} vaatii tämän kentän ja varoittaa, jos sitä pienennetään tai ei muuteta, kun skriptin koodi muuttuu."
-      include: "Määrittää sivut, joilla skripti ajetaan. Tämä lista prosessoidaan ja näytetään skriptin tietosivulla ja sitä käytetään skriptien ryhmittelyyn."
       require_html: "Sisällyttää ulkoista JavaScript-koodia skriptiin. Katso %{external_script_link}."
       require_external_script_link_text: "ulkoisen koodin sisällyttämistä koskevat säännöt"
       updateURL: "Määrittää osoitteen, josta skriptien hallintaohjelmat hakevat päivityksiä. %{site_name} poistaa nämä tiedot, jolloin %{site_name}ista asennetut skriptit päivittyvät vain %{site_name}in kautta."
@@ -323,45 +284,8 @@ fi:
       post_new_script_link_text: 'lähettämään uusi skripti'
     code_rules:
       title: "%{site_name}in skriptejä koskevat säännöt"
-      adult_content_rule_html: "<li>Aikuisille suunnattua sisältöä sisältävät skriptit tai aikuissisältöä sisältäville sivustoille tarkoitetut skriptit täytyy merkitä sellaisiksi, jotta muut käyttäjät voivat valita, näkevätkö ne.</li>"
     external_scripts:
       title: "%{site_name}in käytäntö ulkoisista skripteistä"
-      content_html: >
-          <p>Userscripteillä on tekninen kyky ladata ja suorittaa muita skriptejä.
-          User scripts have the technical ability to load and execute other scripts.
-          %{require_doc_link:<code>@require</code>} -metadata-avain on yksinkertaisin
-          tapa tehdä tämä, mutta skriptit voivat myös esimerkiksi käyttää XmlHttpRequestia
-          ladatakseen skriptin ja sitten lisätä sen DOMiin.</p> <p>Vaikka tämä on
-          hyödyllinen ominaisuus ja useimmat skriptien tekijät käyttävät sitä hyvään
-          tarkoitukseen, sitä voidaan myös käyttää haitallisesti. Yksi %{site_name}in
-          pääperiaatteista on, että käyttäjän täytyy voida tutkia skriptin koodia.
-          Ulkoiset skriptit voivat ohittaa tämän periaatteen monella tavalla: ne voivat
-          muuttua ilman varoitusta tai historiaa, ne voivat jaella eri koodia eri
-          ihmisille, ja niitä voidaan käyttää haitallisen koodin piilottamiseen keskelle
-          tunnettuja kirjastoja. Vaikka joku tarkistaisi ulkoisen skriptin ja toteaisi
-          sen hyväntahtoiseksi, se ei takaisi, että skripti olisi aina ollut tai tulisi
-          aina olemaan hyväntahtoinen.</p> <p>Salliakseen skriptien tekijöiden jatkaa
-          ulkoisten skriptien käyttöä %{site_name} on toteuttanut listan sallituista
-          URL-rakenteista, jotka voidaan sisällyttää skriptiin. Tällä listalla on
-          sijainteja, jotka:</p> <ul>
-
-          <li>Ovat julkisia</li>
-
-          <li>Eivät muutu usein</li>
-
-          <li>Ovat todennäköisesti hyödyllisiä useammalle kuin yhdelle skriptin tekijälle</li>
-
-          </ul> <p>Tämänhetkinen lista on:</p> %{allowed_require_list} <p>Jos yrität
-          lähettää skriptin, joka sisältää näiden sijaintien ulkopuolella olevan <code>@require</code>:n,
-          et voi tallentaa skriptiäsi.</p> <p>Jos skripti, jonka haluat sisällyttää,
-          on JavaScript-kirjasto (kuten jQuery tai YUI), yritä löytää sen jostain
-          yllä olevista sivustoista. Erityisesti %{cdnjs_link:cdnjs} and %{jsdelivr_link:jsDelivr}
-          tarjoavat laajan valikoiman kirjastoja.</p> <p>Jos skripti, jonka haluat
-          sisällyttää, ei ole saatavilla yllä olevilla sivustoilla,  %{contact_link:kerro
-          siitä meille} ja voimme etsiä sen jostain (tai jaella sitä itse!).</p> <p>Jos
-          skripti, jonka haluat sisällyttää, on itse kirjoittamasi, voit lähettää
-          sen erikseen %{site_name}in valitsemalla skriptityypin "Kirjasto". Tämän
-          jälkeen voit sisällyttää lähettämäsi kirjaston skriptiisi.</p>
     script_rewriting:
       title: "Miten %{site_name} uudelleenkirjoittaa lähetetyt skriptit"
     site_feedback_link: "Ilmoita ongelmasta tai kerro idea %{site_name}ista itsestään"
@@ -370,7 +294,6 @@ fi:
       authors_credit: "%{site_name}in olemassaolo ei olisi mahdollista ilman skriptien tekijöitä."
       developers_credit: "%{site_name}in itse ovat rakentaneet %{developers_link:nämä henkilöt}, apunaan kaikki bugeista ilmoittavat ja parannuksia ehdottavat."
       translators_credit: "%{site_name}in on kääntänyt %{translators_link:Greasy Translation Force Transifexissa}:"
-      icons_credit: "Keskusteluikonit ovat lähteestä %{vistastylebase}, ja ne on tehnyt %{iconsland}. Selainikonit ovat lähteestä %{browserlogos}."
     help_with_greasymonkey: "Ohjeet Greasemonkeylle"
     contact:
       title: "Ota yhteyttä johonkuhun"
@@ -440,7 +363,6 @@ fi:
         show_ads: "Näytä mainokset"
         show_sensitive: "Aikuisille suunnattu sisältö"
         preferred_markup: "Merkkaustapa"
-        flattr_username: "Flattr-käyttäjänimi"
       script:
         name: "Nimi"
         description: "Kuvaus"
@@ -450,9 +372,7 @@ fi:
         type: "Skriptin tyyppi"
         additional_info: "Lisätiedot"
         screenshots: "Kuvakaappaukset"
-        screenshot_caption: "Kuvateksti"
         replaced_by_script_id: "Korvaava skripti"
-        approve_redistribution: "Uudelleenlevitys"
   errors:
     messages:
       script_missing_name: "pakollinen - määritä @name:lla"

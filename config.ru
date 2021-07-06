@@ -1,8 +1,6 @@
 # This file is used by Rack-based servers to start the application.
 
-require ::File.expand_path('../config/environment',  __FILE__)
-run Rails.application
+require_relative 'config/environment'
 
-if Rails.env.profile?
-  use Rack::RubyProf, :path => '/www/greasyfork-profile'
-end
+run Rails.application
+Rails.application.load_server

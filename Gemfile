@@ -1,73 +1,83 @@
 source 'https://rubygems.org'
 
-ruby '2.6.2'
+ruby '3.0.1'
 
-gem 'rails', '~> 5.2.0'
-gem 'rails-i18n'
 gem 'bootsnap'
-gem 'uglifier'
+gem 'daemons'
 gem 'devise'
 gem 'devise-i18n', git: 'https://github.com/tigrish/devise-i18n.git'
+gem 'diffy'
+gem 'i18n'
 gem 'mini_racer'
 gem 'mysql2'
-gem 'diffy'
-gem 'sanitize'
 gem 'newrelic_rpm'
+gem 'public_suffix'
+gem 'puma'
+gem 'puma_worker_killer'
+gem 'rack-attack'
+gem 'rails', '~> 6.1.0'
+gem 'rails-i18n'
+gem 'redcarpet'
+gem 'regexp_parser'
+gem 'sanitize'
+gem 'sidekiq'
+gem 'strip_attributes'
+gem 'thinking-sphinx'
+gem 'transifex-ruby', git: 'https://github.com/tmaesaka/transifex-ruby.git'
+gem 'ts-sidekiq-delta'
+gem 'user_agent_parser'
+gem 'webpacker', '~> 5.x'
 gem 'will_paginate'
 gem 'will-paginate-i18n'
-gem 'sass-rails' # Just for the compressor
-gem 'strip_attributes'
-gem 'redcarpet'
-gem 'thinking-sphinx'
-gem 'ts-delayed-delta'
-gem 'delayed_job'
-gem 'delayed_job_active_record'
-gem 'daemons'
-gem 'public_suffix'
-gem 'transifex-ruby', git: 'https://github.com/tmaesaka/transifex-ruby.git'
-gem 'dalli'
+
+gem 'hiredis'
+gem 'redis'
+
+gem 'akismet'
+gem 'detect_language'
+gem 'email_address'
+gem 'it'
+gem 'memoist'
 gem 'omniauth', '>= 1.6.0'
 gem 'omniauth-github'
 gem 'omniauth-gitlab'
 gem 'omniauth-google-oauth2', '>= 0.4.1'
 gem 'omniauth-rails_csrf_protection'
-gem 'detect_language'
-gem 'levenshtein'
-gem "paperclip"
-gem 'it'
-gem 'rb-readline'
-gem 'ace-rails-ap'
-gem 'hashie'
-gem 'recaptcha', require: 'recaptcha/rails'
+
+gem 'active_storage_validations'
+gem 'aws-sdk-s3', require: false
+gem 'image_processing'
+
 gem 'rails-observers'
-gem 'memoist'
+gem 'rb-readline'
+gem 'recaptcha', require: 'recaptcha/rails'
 
-source 'https://rails-assets.org' do
-	gem 'rails-assets-jsonlylightbox'
+group :development, :test do
+  gem 'byebug'
 end
-
-gem 'byebug', group: [:development, :test]
 
 group :development do
-  gem 'capistrano', "~> 3.7"
-  gem 'capistrano-rails', "~> 1.2"
-  gem 'capistrano-passenger'
-  gem 'capistrano-bundler', '~> 1.2'
-  gem 'capistrano-rbenv', '~> 2.1'
-  gem 'capistrano3-delayed-job', '~> 1.0'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano', '~> 3.7'
+  gem 'capistrano3-puma'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-sidekiq'
+  gem 'erb_lint', require: false
   gem 'listen'
-end
-
-group :profile do
-  gem 'ruby-prof'
+  gem 'rubocop'
+  gem 'rubocop-minitest', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
 end
 
 group :test do
-  gem 'capybara'
-  gem 'selenium-webdriver'
   gem 'bundler-audit'
-  gem 'mocha'
+  gem 'capybara'
   gem 'minitest-around'
+  gem 'mocha'
+  gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 4.0'
 end

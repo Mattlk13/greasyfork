@@ -1,14 +1,14 @@
 <%- title t('scripts.admin.title', script_name: @script.name) %>
 
 <% if !@script.errors.empty? %>
-	<div class="alert">
-		<p><%=t('common.error_preamble')%></p>
-		<ul class="errors">
-			<% @script.errors.full_messages.each do |m| %>
-				<li><%=m%></li>
-			<% end %>
-		</ul>
-	</div>
+  <div class="alert">
+    <p><%= t('common.error_preamble') %></p>
+    <ul class="errors">
+      <% @script.errors.full_messages.each do |m| %>
+        <li><%= m %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
 
 <% if @script.users.include?(current_user) %>
@@ -19,3 +19,8 @@
 
 <%= render partial: 'set_locale' %>
 <%= render partial: 'moderator_log' %>
+<%= render partial: 'compare' %>
+
+<% if current_user.moderator? %>
+  <%= render partial: 'mark_adult' %>
+<% end %>

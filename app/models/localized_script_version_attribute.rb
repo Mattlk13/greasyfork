@@ -1,10 +1,12 @@
 class LocalizedScriptVersionAttribute < ApplicationRecord
+  include MentionsUsers
 
-	belongs_to :script_version
-	belongs_to :locale
+  belongs_to :script_version
+  belongs_to :locale
 
-	strip_attributes :only => [:attribute_key, :attribute_value]
+  delegate :script, to: :script_version
 
-	validates_presence_of :attribute_key, :attribute_value, :locale, :value_markup
+  strip_attributes only: [:attribute_key, :attribute_value]
 
+  validates :attribute_key, :attribute_value, :locale, :value_markup, presence: true
 end

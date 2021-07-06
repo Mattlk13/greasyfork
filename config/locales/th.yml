@@ -27,7 +27,6 @@ th:
     applies_to_link_title:
       other: "ดูสคริปต์อื่น ๆ อีก %{count} สคริปต์ สำหรับ %{site}"
     applies_to_all: "ไซต์ทั้งหมด"
-    additional_info: "คำอธิบายของผู้เขียน"
     install: "ติดตั้งสคริปต์นี้"
     install_help: "?"
     install_help_title: "วิธีการติดตั้ง"
@@ -54,16 +53,10 @@ th:
     delete_update_behaviour_1: "ให้พวกเขาเก็บไว้ตามเดิม"
     delete_update_behaviour_2: "อัปเดตสคริปต์ให้ว่างเปล่าให้กับพวกเขา นี่เป็นวิธีที่เหมาะสมเมื่อสคริปต์มีผลเสียบนไซต์ที่สคริปต์ทำงาน"
     delete_permanently_heading: "การลบถาวร"
-    delete_permanently_explanation: "การลบสคริปต์ของคุณอย่างถาวรจะลบมันและบันทึกที่เกี่ยวข้องทั้งหมด ยกเว้นกระทู้บนฟอรัมและบันทึกการดำเนินการของผู้ช่วยดูแล การลบถาวรเป็นการถาวร ซึ่งไม่สามารถถูกย้อนกลับได้ แม้โดยผู้ช่วยดูแล"
-    delete_permanently_request_explanation: "การลบถาวรของสคริปต์นี้สามารถเสร็จสมบูรณ์ได้หลังจากถูกตรวจสอบโดยผู้ช่วยดูแลแล้วเท่านั้น"
-    delete_permanently_confirm: "คุณแน่ใจหรือไม่ว่าคุณต้องการจะลบสคริปต์ของคุณอย่างถาวร? การดำเนินการนี้ไม่สามารถย้อนกลับได้"
     delete_permanently_submit: "ร้องขอการลบถาวร"
     delete_permanently_immediate_submit: "ลบอย่างถาวร"
-    delete_permanently_notice: "คำขอสำหรับการลบถาวรได้ถูกบันทึกแล้ว และจะถูกตรวจสอบโดยผู้ช่วยดูแล"
-    delete_permanently_already_requested: "คุณได้ร้องขอการลบถาวรเมื่อ %{datetime}"
     delete_permanently_notice_immediate: "สคริปต์ถูกลบอย่างถาวรแล้ว"
     cancel_delete_permanently_submit: "ยกเลิกคำขอการลบถาวร"
-    cancel_delete_permanently_notice: "คำขอของคุณสำหรับการลบถาวรถูกยกเลิกแล้ว"
     delete_permanently_rejected_locked: "สคริปต์นี้ถูกล็อคอยู่และไม่สามารถถูกลบอย่างถาวรได้"
     admin_page: "ผู้ดูแล"
     admin:
@@ -82,9 +75,7 @@ th:
     feedback_title: "%{script_name} - ขอเสนอแนะ"
     feedback_no_discussions_html: "ยังไม่มีกระทู้ที่ถูกโพสต์ %{start_first_discussion_link}"
     feedback_start_first_discussion_link: "เป็นคนแรกที่สนทนาเกี่ยวกับสคริปต์นี้"
-    feedback_discussions_heading: "กระทู้บนฟอรัม Greasy"
     feedback_favoriters_heading: "ผู้ชื่นชอบ"
-    feedback_favoriters_user_list_intro: "สคริปต์นี้ถูกชื่นชอบโดย:"
     feedback_no_favoriters: "สคริปต์นี้ยังไม่ได้ถูกชื่นชอบโดยใครเลย"
     feedback_sign_in_to_favorite: "เข้าสู่ระบบเพื่อเพิ่มไปยังที่ชื่นชอบ"
     stats_title: "%{script_name} - สถิติ"
@@ -98,14 +89,6 @@ th:
     stats_download_raw_data_html: "ดาวโหลดข้อมูลทั้งหมดแบบ: %{links}"
     stats_no_data: "ไม่มี"
     derivatives_title: "%{script_name} - คล้ายคลึง"
-    derivatives_intro: "สคริปต์เหล่านี้อาจอิงจากของคุณ (หรือคุณอาจอิงจากของพวกเขา) หากคุณพบการใช้งานโค้ดของคุณที่ไม่ได้รับอนุญาต รายงานสคริปต์นั้นโดยเริ่มกระทู้ใหม่"
-    derivatives_code_matches_info_html:
-      other: "สคริปต์ที่ถูกโพสต์โดยคนอื่นที่มีโค้ดอย่างน้อย %{match_size} บรรทัดที่เหมือนกับสคริปต์ของคุณ การตรวจสอบนี้ทำงานกับเฉพาะสคริปต์ที่มีขนาดน้อยกว่า %{max_size} และทำงานครั้งล่าสุดเมื่อ %{last_run}"
-    derivatives_namespace_matches_info_html: "สคริปต์ที่ถูกโพสต์โดยคนอื่นโดยใช้ <code>%{namespace}</code>:"
-    derivatives_name_matches_info: "สคริปต์ที่ถูกโพสต์โดยคนอื่นที่มีชื่อคล้ายกับของคุณมากที่สุด:"
-    derivatives_script_html: "%{script_link} โดย %{user_link} สัญญาอนุญาต: %{license}"
-    derivatives_script_with_code_line_html: "%{script_lines_link} โดย %{user_link} สัญญาอนุญาต: %{license}"
-    script_lines_link: "%{script_name} บรรทัดที่ %{start} ถึง %{end}"
     listing_title_all_sites: "สคริปต์ผู้ใช้สำหรับไซต์ทั้งหมด"
     listing_description_all_sites: "สคริปต์ผู้ใช้ที่เพิ่มคุณสมบัติและลบจุดบกพร่องต่าง ๆ บนไซต์ทั้งหมด"
     listing_title_for_site: "สคริปต์ผู้ใช้สำหรับ %{site}"
@@ -134,7 +117,6 @@ th:
     listing_set_locale_filter: "กำลังแสดงผลลัพธ์สำหรับภาษาทั้งหมด %{set_filter_link:แสดงผลลัพธ์%{language}เท่านั้น}"
     listing_remove_locale_filter: "กำลังแสดงเพียง %{language} ผลลัพธ์ %{remove_filter_link:แสดงผลลัพธ์สำหรับภาษาทั้งหมด}"
     import: "นำเข้าสคริปต์"
-    new: "โพสต์สคริปต์"
     support_site: "เยี่ยมชมหน้าสนับสนุนของผู้เขียน"
     support_email: "อีเมลถึงผู้เขียนสำหรับการสนับสนุน"
     contribution_no_amount: "ขอบคุณ %{author} โดยบริจาค"
@@ -158,7 +140,6 @@ th:
     upload_label: "หรืออัปโหลด:"
     enable_source_code_editor_label: "เปิดการใช้งานการไฮไลต์โครงสร้างไวยากรณ์ตัวแก้ไขต้นฉบับ"
     changelog_note: "มีการเปลี่ยนแปลงอะไรในเวอร์ชันนี้?"
-    additional_info_note_html: "เขียนเกี่ยวกับสคริปต์ของคุณ %{allowed_elements_link}"
     post_new_script: "โพสต์สคริปต์"
     post_updated_script: "โพสต์เวอร์ชันใหม่"
     type_1_html: "สคริปต์ผู้ใช้สาธารณะ - สคริปต์ผู้ใช้สำหรับทุกคนเพื่อดูและใช้งาน"
@@ -179,8 +160,6 @@ th:
     localized_additional_info_with_no_name: "ข้อมูลเพิ่มเติมได้ถูกระบุไว้สำหรับภาษา '%{locale_code}' แต่ไม่ได้ให้ @name:%{locale_code} ไว้"
     code_syncing_from_url_html: "โค้ดของสคริปต์นี้ได้ถูกกำหนดไว้ให้ซิงค์จาก: %{field}"
     sync_type_intro: "สคริปต์จะถูกซิงค์:"
-    sync_type_1: "โดยตนเอง - ซึ่งจะถูกตรวจสอบสำหรับการอัปเดตเมื่อคุณเปิดเท่านั้น"
-    sync_type_2: "โดยอัตโนมัติ - ซึ่งจะถูกตรวจสอบสำหรับการอัปเดตเป็นระยะ"
     sync_failed_info_html: "การซิงค์ที่พยายามล่าสุดคือเมื่อ %{date} ซึ่งได้ผลลัพธ์ %{error}"
     sync_success_info_html: "การซิงค์ที่สำเร็จล่าสุดคือเมื่อ %{date}"
     sync_never_succeeded: "การซิงค์ไม่เคยสำเร็จเลย"
@@ -190,7 +169,6 @@ th:
     additional_info_default_sync_html: "ข้อมูลเพิ่มเติมเริ่มต้น (ภาษาตรงกับ <code>@name</code>)"
     additional_info_localized_sync_html: "สำหรับภาษา (ตรงกับ <code>@name:XX</code>)"
     sync_url_placeholder: "(URL)"
-    screenshots_explanation: "รูปภาพ PNG, GIF หรือ JPEG สูงสุด %{number} รูป แต่ละรูปขนาดไม่เกิน %{size}"
     screenshots_add: "เพิ่ืม:"
     screenshots_remove: "ลบ"
     diff_title: "%{script} - ความแตกต่างระหว่างเวอร์ชัน"
@@ -204,13 +182,7 @@ th:
     ok_rating_explanation: "จำนวนผู้คนที่ให้คะแนนพอใช้"
     bad_rating_explanation: "จำนวนผู้คนที่ให้คะแนนแย่"
     write_your_own_html: "%{post_a_script_link} (หรือ %{learn_to_write_scripts_link})"
-    post_a_script_link_text: "โพสต์สคริปต์ที่คุณเขียน"
     learn_to_write_scripts_link_text: "เรียนรู้วิธีเขียน"
-    approve_redistribution_use_user_setting: "ใช้ค่าเริ่มต้นบัญชีของฉัน (%{user_setting})"
-    approve_redistribution_use_user_setting_not_set: "ไม่ได้กำหนด"
-    approve_redistribution_true: "ฉันอนุญาตให้สคริปต์ของฉันถูกโพสต์ใหม่ในที่อื่น ๆ ได้"
-    approve_redistribution_false: "ฉันไม่ต้องการให้สคริปต์ของฉันถูกโพสต์ใหม่ในที่อื่น ๆ"
-    redistributable_title: "การอนุญาตเผยแพร่สคริปต์ผู้ใช้ใหม่"
     adult_content: "เนื้อหาสำหรับผู้ใหญ่"
     adult_content_self_report: "สคริปต์นี้มีเนื้อหาสำหรับผู้ใหญ่หรือมีไว้สำหรับไซต์ที่มีเนื้อหาสำหรับผู้ใหญ่"
     not_adult_content_self_report_html: "สคริปต์นี้ <strong>ไม่มี</strong> เนื้อหาสำหรับผู้ใหญ่ และ <strong>ไม่ได้</strong> มีไว้สำหรับไซต์ที่มีเนื้อหาสำหรับผู้ใหญ่"
@@ -293,11 +265,6 @@ th:
       all_sites: "ไซต์ทั้งหมด"
       user: "สคริปต์โดยผู้ใช้ %{user}"
       locale: "สคริปต์ใน%{locale_name}"
-  forum_discussions:
-    listing_no_script_no_reply_html: "%{discussion_link} โดย %{original_poster_link} %{original_post_date}"
-    listing_no_script_with_reply_html: "%{discussion_link} โดย %{original_poster_link} %{original_post_date} ความเห็นล่าสุดโดย %{last_commenter_link} %{last_comment_date}"
-    listing_with_script_no_reply_html: "%{script_link}: %{discussion_link} โดย %{original_poster_link} %{original_post_date}"
-    listing_with_script_with_reply_html: "%{script_link}: %{discussion_link} โดย %{original_poster_link} %{original_post_date} ความเห็นล่าสุดโดย %{last_commenter_link} %{last_comment_date}"
   home:
     title: "%{site_name} - สคริปต์ผู้ใช้ที่ปลอดภัยแและเป็นประโยชน์"
     welcome: "ยินดีต้อนรับสู่ %{site_name} ไซต์สำหรับสคริปต์ผู้ใช้"
@@ -309,34 +276,6 @@ th:
     explain_user_scripts_html: "สคริปต์ผู้ใช้จะทำให้คุณควบคุมประสบการณ์การเปิดหาของคุณ เมื่อติดตั้งแล้ว สคริปต์จะทำให้ไซต์ที่คุณเยี่ยมชมดีขึ้นกว่าเดิมโดยอัตโนมัติได้โดยเพิ่มคุณสมบัติ ทำให้ใช้งานง่ายขึ้น หรือกำจัดสิ่งที่น่ารำคาญออก สคริปต์ผู้ใช้บน %{site_name} ถูกเขียนโดนผู้ใช้อื่นและถูกโพสต์เพื่อแบ่งปันกันทั่วโลก ซึ่งสามารถติดตั้งได้ฟรีและใช้งานง่าย"
     installing_step1_header: "ขั้นตอนที่ 1: ติดตั้งเครื่องมือจัดการสคริปต์ผู้ใช้"
     installing_step1_caption: "Tampermonkey บน Chrome"
-    installing_step1_description_html: >
-        <p>เพื่อที่จะใช้งานสคริปต์ผู้ใช้ คุณต้องติดตั้งเครื่องมือจัดการสคริปต์ผู้ใช้ก่อน
-        เครื่องมือจัดการสคริปต์ผู้ใช้ที่คุณใช้งานได้จะขึ้นอยู่กับเบราว์เซอร์ที่คุณใช้งาน</p>
-
-        <ul>
-
-        <li>Chrome: %{chrome_tampermonkey_link:Tampermonkey}</a> หรือ %{chrome_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Firefox: %{firefox_greasemonkey_link:Greasemonkey}, %{firefox_tampermonkey_link:Tampermonkey}
-        หรือ %{firefox_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Safari: %{safari_tampermonkey_link:Tampermonkey}</li>
-
-        <li>Microsoft Edge: %{edge_tampermonkey_link:Tampermonkey}</li>
-
-        <li>Opera: %{opera_tampermonkey_link:Tampermonkey} หรือ %{opera_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Maxthon: %{maxthon_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Dolphin: %{dolphin_tampermonkey_link:Tampermonkey}</li>
-
-        <li>UC: %{uc_tampermonkey_link:Tampermonkey}</li>
-
-        <li>Qupzilla: (ไม่จำเป็นต้องติดตั้งซอฟต์แวร์เพิ่มเติม)</li>
-
-        <li>AdGuard: (ไม่จำเป็นต้องติดตั้งซอฟต์แวร์เพิ่มเติม)</li>
-
-        </ul>
     installing_step2_header: "ขั้นตอนที่ 2: ติดตั้งสคริปต์ผู้ใช้"
     installing_step2_caption: "ปุ่มติดตั้งของสคริปต์ผู้ใช้"
     installing_step2_description_html: >
@@ -403,7 +342,6 @@ th:
       none: "ไม่รับอีเมลเกี่ยวกับกระทู้ของสคริปต์ของคุณ"
       discussion_only: "รับอีเมลเมื่อสนทนาถูกโพสต์ลงบนสคริปต์ของคุณ"
       discussion_and_comment: "รับอีเมลเมื่อสนทนาถูกโพสต์ลงบนสคริปต์ของคุณ หรือเมื่อกระทู้นั้นมีความเห็นใหม่"
-      note: "คุณสามารถรับอีเมลอื่น ๆ ได้ตามการตั้งค่าของคุณในฟอรัม"
     list_display_html:
       other: "%{user_link} - %{count} สคริปต์"
     listing_number_of_scripts: "จำนวนสคริปต์"
@@ -416,9 +354,6 @@ th:
     show_ads_description: "สนับสนุน %{site_name} โดยปิดการซ่อนโฆษณา"
     show_sensitive_description: "แสดงสคริปต์ที่มีเนื้อหาสำหรับผู้ใหญ่"
     preferred_markup_description: "จะถูกใช้สำหรับสคริปต์และโพสต์ใหม่"
-    flattr_username_description_html: "ผู้ใช้ของสคิรปต์ของคุณจะถูกชวนให้บริจาคไปยังบัญชี <a href=\"https://flattr.com\">Flattr</a> ของคุณ "
-    approve_redistribution_true: "ฉันอนุญาตให้สคริปต์ของฉันถูกโพสต์ใหม่ในที่อื่น ๆ ได้"
-    approve_redistribution_false: "ฉันไม่ต้องการให้สคริปต์ของฉันถูกโพสต์ใหม่ในที่อื่น ๆ"
     greasy_fork_scripts_link:
       other: "%{user_name} ก็มี %{count} สคริปต์บน Greasy Fork"
     delete_link: "ลบบัญชี"
@@ -469,7 +404,6 @@ th:
       title: "เครดิต"
       authors_credit: "%{site_name} จะไม่สามารถเกิดขึ้นได้ หากไม่มีผู้เขียนที่ร่วมสนับสนุนสคริปต์"
       translators_credit: "%{site_name} ถูกแปลโดย %{translators_link:กลุ่มแปลภาษา Greasy บน Transifex}:"
-      icons_credit: "ไอคอนกระทู้มาจาก %{vistastylebase} โดย %{iconsland} ไอคอนเบราว์เซอร์มาจาก %{browserlogos}"
     help_with_greasymonkey: "ความช่วยเหลือกับ Greasemonkey"
     contact:
       title: "ติดต่อใครสักคน"
@@ -485,9 +419,6 @@ th:
     code_search:
       title: "การค้นหาโค้ด"
       description: "ค้นหาโค้ดสคริปต์ ไม่ไวต่ออักษรใหญ่เล็ก ค้นหาด้วยข้อความธรรมดาโดยไร้อักขระตัวแทน"
-    forum_search:
-      title: "การค้นหาฟอรัม"
-      description: "ค้นหากระทู้และคำวิจารณ์ในฟอรัม %{fulltext_link:ค้นหาด้วยภาษาธรรมชาติ MySQL}"
     user_search:
       title: "การค้นหาผู้ใช้"
       description: "ค้นหาผู้ใช้ด้วยชื่อ ค้นหาด้วยข้อความธรรมดา"
@@ -526,7 +457,6 @@ th:
         show_ads: "แสดงโฆษณา"
         show_sensitive: "เนื้อหาสำหรับผู้ใหญ่"
         preferred_markup: "Markup ที่ต้องการ"
-        flattr_username: "ชื่อผู้ใช้ Flattr"
       script:
         name: "ชื่อ"
         description: "คำอธิบาย"
@@ -536,9 +466,7 @@ th:
         type: "ประเภทสคริปต์"
         additional_info: "ข้อมูลเพิ่มเติม"
         screenshots: "ภาพหน้าจอ"
-        screenshot_caption: "คำบรรยาย"
         replaced_by_script_id: "สคริปต์ทดแทน"
-        approve_redistribution: "การเผยแพร่ใหม่"
       script_set:
         name: "ชื่อ"
         description: "คำอธิบาย"

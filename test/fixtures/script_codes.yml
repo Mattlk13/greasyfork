@@ -7,8 +7,10 @@ empty:
     // @description		Unit test.
     // @version 1.1
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: b44e0ba7307d4cc19fb7745991f492777cc3e6e8
 
 one:
   id: 1
@@ -18,8 +20,10 @@ one:
     // @description		Unit test.
     // @version 1.1
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: b44e0ba7307d4cc19fb7745991f492777cc3e6e8
 
 two:
   id: 2
@@ -28,8 +32,10 @@ two:
     // @name		A Test!
     // @description		Unit test.
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: a4ca77a0227e5718a474acd0e1fb62a22480a319
 
 three:
   id: 3
@@ -38,8 +44,10 @@ three:
     // @name		A Test!
     // @description		Unit test.
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: a4ca77a0227e5718a474acd0e1fb62a22480a319
 
 four:
   id: 4
@@ -47,8 +55,10 @@ four:
     // ==UserScript==
     // @name		A Test!
     // @description		Unit test.
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: 561b8d8ea39674222c0f9e36fc1da5407d68d266
 
 five:
   id: 5
@@ -57,8 +67,10 @@ five:
     // @name		A Test!
     // @description		Unit test.
     // @namespace http://example.com
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: 697fc8e92e66f3d0b7e7fed96edf26a3fbea9470
 
 six:
   id: 6
@@ -67,8 +79,10 @@ six:
     // @name		This is something
     // @description		Unit test.
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 2;
+  code_hash: 3b1728653ce8f4080a0553cdc1436057c6c5b69d
 
 seven:
   id: 7
@@ -78,8 +92,10 @@ seven:
     // @description		Unit test.
     // @version 1.1
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: b44e0ba7307d4cc19fb7745991f492777cc3e6e8
 
 eight:
   id: 8
@@ -89,8 +105,10 @@ eight:
     // @description		Unit test.
     // @version 1.1
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: b44e0ba7307d4cc19fb7745991f492777cc3e6e8
 
 nine:
   id: 9
@@ -100,8 +118,10 @@ nine:
     // @description		Unit test.
     // @version 1.1
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: 77728dbfbaafbe615f05ee249b0b55db2b84edb2
 
 ten:
   id: 10
@@ -111,8 +131,10 @@ ten:
     // @description		Unit test.
     // @version 1.1
     // @namespace http://greasyfork.local/users/1
+    // @include *
     // ==/UserScript==
     var foo = 1;
+  code_hash: b44e0ba7307d4cc19fb7745991f492777cc3e6e8
 
 eleven:
   id: 11
@@ -122,8 +144,10 @@ eleven:
     // @namespace		http://example.com/1
     // @description		Unit test.
     // @version		1
+    // @include *
     // ==/UserScript==
     foo.baz();
+  code_hash: cac201e745e68a89779e274d57c0c827041bb873
 
 twelve:
   id: 12
@@ -133,8 +157,10 @@ twelve:
     // @namespace		http://example.com/1
     // @description		Unit test.
     // @version		1
+    // @include *
     // ==/UserScript==
     foo.baz();
+  code_hash: cac201e745e68a89779e274d57c0c827041bb873
 
 thirteen:
   id: 13
@@ -145,8 +171,10 @@ thirteen:
     // @namespace		http://example.com/1
     // @description		Unit test.
     // @version		1
+    // @include *
     // ==/UserScript==
     foo.baz();
+  code_hash: 40d49297407f516855dff8684a9de4268d35de70
 
 fourteen:
   id: 14
@@ -158,8 +186,10 @@ fourteen:
     // @description		Unit test.
     // @description:fr		Test d'unit.
     // @version		1
+    // @include *
     // ==/UserScript==
     foo.baz();
+  code_hash: 2a5299edb48846f3ad130926aeb1e054f0791d1a
 
 webhook_sync:
   id: 18
@@ -168,5 +198,78 @@ webhook_sync:
     // @name         mb. FUNKEY ILLUSTRATED RECORDS 15
     // @description  musicbrainz.org: CAA front cover art archive pictures/images (release groups and releases) Big illustrated discography and/or inline everywhere possible without cluttering the pages
     // @version      2016.3.20.2000
+    // @include *
     // ==/UserScript==
     foo.baz();
+  code_hash: 51811e4c767e8d6157c6342b6790e099fea19ec1
+
+library:
+  code: |
+    // ==UserScript==
+    // @name A Test Update!
+    // @description Unit test.
+    // @version 1.2
+    // @namespace http://greasyfork.local/users/1
+    // @include *
+    // ==/UserScript==
+    var foo = 1;
+  code_hash: 42d7eec5e61f71dd5472716ffe39ea1dd066acd9
+
+copy_origin:
+  id: 20
+  code: |
+    // ==UserScript==
+    // @name A Test Update!
+    // @description Unit test.
+    // @version 1.2
+    // @namespace http://greasyfork.local/users/1
+    // @include *
+    // ==/UserScript==
+    some.unique[value]
+  code_hash: 281bb514bd0dc57cddb83702bf0fbeda28756701
+
+antifeatures:
+  id: 21
+  code: |
+    // ==UserScript==
+    // @name A Test Update!
+    // @description Unit test.
+    // @version 1.2
+    // @namespace http://greasyfork.local/users/1
+    // @include *
+    // @antifeature ads this has ads
+    // ==/UserScript==
+    var foo;
+  code_hash: 281bb514bd0dc57cddb83702bf0fbeda28756701
+
+style:
+  id: 22
+  code: |
+    /* ==UserStyle==
+    @name A Test Update!
+    @description Unit test.
+    @version 1.2
+    @namespace http://greasyfork.local/users/1
+    @include *
+    @antifeature ads this has ads
+    ==/UserStyle== */
+    @-moz-document domain(example.com) {
+      a { color: blue }
+    }
+  code_hash: 281bb514bd0dc57cddb83702bf0fbeda28756701
+
+style_antifeatures:
+  id: 23
+  code: |
+    /* ==UserStyle==
+    @name A Test Update!
+    @description Unit test.
+    @version 1.2
+    @namespace http://greasyfork.local/users/1
+    @include *
+    @antifeature ads this has ads
+    ==/UserStyle== */
+    @-moz-document domain(example.com) {
+      a { color: blue }
+    }
+  code_hash: 281bb514bd0dc57cddb83702bf0fbeda28756701

@@ -3,15 +3,15 @@
     <li>
       <article>
         <h2>
-          <%= link_to script.name(I18n.locale), script_path(script) %>
+          <%= render_script(script) %>
           (<%= script.page_views %>)
         </h2>
         <div>
-          <%= script.description(I18n.locale) %>
+          <span class="script-description"><%= script.description(I18n.locale) %></span>
           <%= link_to('Translate', "https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=#{URI.encode_www_form_component(script.description(I18n.locale))}") %>
         </div>
         <p>
-          <%= script.site_applications.map { |s| s.domain? ? link_to(s.text, "http://#{s.text}") : s.text}.join(", ").html_safe %>
+          <%= script.site_applications.map { |s| s.domain? ? link_to(s.text, "http://#{s.text}") : s.text}.join(', ').html_safe %>
         </p>
         <p style="padding: 0.5em 0">
           <%= form_with(model: @script, url: approve_admin_ad_path(script), method: :patch, html: { style: 'display: inline;' }) do %>
@@ -21,14 +21,7 @@
             <button>Reject</button>
           <% end %>
         </p>
-        <% script_version = script.get_newest_saved_script_version %>
-        <% if !script_version.screenshots.empty? %>
-          <div class="script-screenshots">
-            <% script_version.screenshots.each do |screenshot| %>
-              <a href="<%=screenshot.screenshot.url%>" data-jslghtbx="<%=screenshot.screenshot.url%>" data-jslghtbx-group="screenshots" <%if !screenshot.caption.nil?%>title="<%=screenshot.caption%>" data-jslghtbx-caption="<%=screenshot.caption%>"<%end%>><%= image_tag screenshot.screenshot.url(:thumb) %></a>
-            <% end %>
-          </div>
-        <% end %>
+        <%= render partial: 'screenshots/show', locals: { attachable: script.newest_saved_script_version } %>
       </article>
     </li>
   <% end %>

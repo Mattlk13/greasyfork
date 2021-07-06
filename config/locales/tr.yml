@@ -28,7 +28,6 @@ tr:
       one: "%{site} için %{count} başka script gör"
       other: "%{site} için %{count} başka scriptler gör"
     applies_to_all: "Tüm siteler"
-    additional_info: "Yazarın Açıklaması"
     install: "Bu scripti kur"
     install_help: "?"
     install_help_title: "Nasıl kurarım"
@@ -37,13 +36,18 @@ tr:
     reinstall: "%{version} sürümünü tekrar yükle"
     old_version_warning: "Bu, betiğin en son sürümü değil. Yüklerseniz, yeni sürüme güncelleyemezsiniz. Yine de yüklensin mi?"
     promoted: "Desteklenen betik"
-    author_promoted: "Yazar'ın tavsiye betiği"
+    author_promoted: "Yazar'ın tavsiye ettiği betik"
     promoted_text_html: "Şunu da %{script_link} sevebilirsiniz."
     library_instructions_html: "Bu script direkt olarak kurulamaz. Başka scriptler için bir kütüphanedir ve meta yönergeleri içerir %{code}"
     deleted_notice: "Bu script silinmiş."
-    deleted_notice_with_replacement_html: "Bu script silinip <a href=\"%{replacement_script_url}\">%{replacement_script_name}</a> ile değiştirilmiştir."
+    deleted_notice_with_related: "Baktığınız betik silinmiş, ama burada benzer betikleri bulabilirsiniz"
+    deleted_undelete_notice_html: "Bu betik bir moderatör tarafından kilitlenmiş ve geri alınamaz.\nGerekçe: \"<i>%{delete_reason}</i>\"."
+    deleted_locked_author_notice_html: "Bu script bir moderatör tarafından silinmiş ve erişebilir değil.\nGerekçe: \"<i>%{delete_reason}</i>\"."
+    deleted_author_notice: "Bu komut dosyası silinmiş ve diğerleri tarafından erişilemez. Silme sekmesinden geri alabilirsin."
     version_notice_html: "%{date} itibariyledir. %{latest_version_link} görün."
     version_notice_latest_version_link: "En son verisyonu"
+    reported_notice: "\"%{script_name}\" rapor edildi ve bir moderatör tarafından incelenmeyi bekliyor."
+    reported_notice_for_author: "Bu betiğin, bir moderatör tarafından incelenene kadar diğer kullanıcılara erişimi olmayacaktır."
     info_page: "Bilgi"
     code_page: "Kod"
     history_page: "Geçmiş"
@@ -57,21 +61,23 @@ tr:
     delete_update_behaviour_1: "Olduğu gibi saklasınlar."
     delete_update_behaviour_2: "Boş bir scriptle yer değiştirsin. Bu seçenek scriptiniz bir sitede olumsuz bir davranış sergiliyorsa kullanılabilir."
     delete_permanently_heading: "Kalıcı olarak silme"
-    delete_permanently_explanation: "Kalıcı olarak silme işlemi, scriptinizi ve ona ait tüm kayıtları forum tartışmaları ve yönetici müdahaleleri hariç siler. Bu işlem sistem yöneticileri tarafından bile geri alınamaz."
-    delete_permanently_request_explanation: "Script, moderatörlerin incelemesi tamamlandıktan sonra kalıcı olarak silinebilir."
-    delete_permanently_confirm: "Scripti kalıcı olarak silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!"
+    delete_permanently_explanation_html: >-
+        Kalıcı olarak silme işlemi, betiğinizi ve ona ait tüm kayıtları forum tartışmaları
+        ve yönetici müdahaleleri hariç siler. Bu işlem sistem yöneticileri tarafından
+        bile geri alınamaz.
+    delete_permanently_confirm: "Betiği kalıcı olarak silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!"
     delete_permanently_submit: "Kalıcı olarak silme isteğinde bulun"
     delete_permanently_immediate_submit: "Kalıcı olarak sil"
-    delete_permanently_notice: "Scriptinizi kalıcı olarak silme talebiniz kaydedilmiştir ve bir yönetici tarafından incelenecektir."
+    delete_permanently_notice: "Kalıcı olarak silme isteğiniz kaydedilmiştir. 7 gün içerisinde betiğiniz kalıcı olarak silinecektir."
     delete_permanently_already_requested: "%{datetime} tarihinde kalıcı silme isteğinde bulundunuz."
     delete_permanently_notice_immediate: "Script kalıcı olarak silindi."
     cancel_delete_permanently_submit: "Kalıcı silme isteğini iptal et"
-    cancel_delete_permanently_notice: "Kalıcı silme isteğiniz iptal edildi."
+    cancel_delete_permanently_notice: "Kalıcı silme talebiniz iptal edildi. Betiğiniz hala başkaları tarafından görülemiyor."
     delete_permanently_rejected_locked: "Bu script kilitlidir ve kalıcı olarak silinemez."
     admin_page: "Yönetici"
     admin:
       title: "%{script_name} - Yönetici"
-      promoted_heading: "Desteklenen script "
+      promoted_heading: "Desteklenen betik"
       promoted_explanation: "Bu betiği yükledikten sonra, %{site_name} tercihinize uyan başka bir betik tavsiye edebilir."
       promoted_script_label: "Promosyon için script URL'si"
       promoted_submit: "Scripti ayarla"
@@ -81,6 +87,8 @@ tr:
       locale_multiple_note: "Dikkat, %{meta_keys_link:Çoklu yerel ayar bir script için tanımlı olabilir}."
       update_locale: "Yerel Ayarı Kaydet"
       no_moderator_logs: "Bu script üzerinde moderatör etkinliği yok."
+      compare_title: "Başka bir betikle karşılaştır"
+      compare_button: "Karşılaştır"
     history_title: "%{script_name} - Versiyon geçmişi"
     history_only_code_changes_info: "Bunlar bu scriptin güncellenmiş kod versiyonlarıdır."
     history_all_changes_link: "Bütün versiyonları göster."
@@ -91,11 +99,11 @@ tr:
     feedback_title: "%{script_name} - Geribildirim"
     feedback_has_reports: "Bu betik %{site_name}'in kurallarını çiğnediği için rapor edildi."
     feedback_no_discussions_html: "Henüz tartışmalar yapılmamış.  %{start_first_discussion_link}"
+    feedback_no_discussions_on_page_form: "Henüz hiçbir gönderi gönderilmedi."
     feedback_start_first_discussion_link: "Bu script hakkındaki tartışmayı ilk siz başlatın."
-    feedback_discussion_or_report: "% {new_discussion_link: Bu komut dosyasıyla ilgili yeni bir tartışma başlatınız} veya% {report_link: kaldırılmak üzere raporlayın}."
-    feedback_discussions_heading: "Greasy Forum'da Tartışmalar"
+    feedback_discussion_or_report: "% {new_discussion_link: Bu script ile ilgili yeni bir tartışma başlatınız} veya% {report_link: kaldırılmak üzere raporlayın}."
     feedback_favoriters_heading: "Favorilerine ekleyenler"
-    feedback_favoriters_user_list_intro: "Bu scripti bu kişiler favorilerine ekledi:"
+    feedback_favoriters_user_list_html: "Bu script, 1%{user_list} tarafından favorilere eklendi"
     feedback_no_favoriters: "Bu scripti henüz kimse favorilerine eklemedi."
     feedback_sign_in_to_favorite: "Favorilere eklemek için oturum aç."
     stats_title: "%{script_name} - İstatistik"
@@ -108,16 +116,30 @@ tr:
     stats_raw_data_header: "İşlenmemiş veri"
     stats_download_raw_data_html: "Verileri şu şekilde indir: %{links}"
     stats_no_data: "N/A"
+    stats_filters: "Filtre: %{filter_options}"
+    stats_filter_options:
+      month: Son 30 gün
+      year: Son 365 gün
+      all: Tüm zamanlar
     derivatives_title: "%{script_name} - Türevleri"
-    derivatives_intro: "Bu scriptler belki sizinkine dayalı olabilir (belki sizinki onlara dayalı olabilir). Eğer kodunuzun yetkisiz bir kullanımını bulursanız, tartışma başlatarak scripti rapor edebilirsiniz."
-    derivatives_code_matches_info_html:
-      one: "Başkaları tarafından yayınlanan Script dosyaları, kodunuzla en azından satırında ortak kod içerir. Bu kontrol yalnızca Script dosyalarından daha küçük ve en son çalıştırılan Scripts üzerinde gerçekleştirilir.%{match_size}%{max_size}%{last_run}"
-      other: "Diğerleri tarafından yayınlanan Script dosyası, kodunuzla ortak olarak en azından satırları içerir. Bu kontrol yalnızca Script dosyalarından daha küçük ve en son çalıştırılan Scripts üzerinde gerçekleştirilir.%{match_size}%{max_size}%{last_run}"
-    derivatives_namespace_matches_info_html: "Başkaları tarafından <code>%{namespace}</code> kullanılarak gönderilen scriptler:"
-    derivatives_name_matches_info: "Başkaları tarafından gönderilen, seninkiler ile isimleri en benzer olan scriptler:"
-    derivatives_script_html: "%{script_link}, %{user_link} tarafından, lisans: %{license}"
-    derivatives_script_with_code_line_html: "%{script_lines_link}, %{user_link} tarafından, lisans: %{license}"
-    script_lines_link: "%{script_name}, lines %{start} to %{end}"
+    derivatives_intro: "Bu sbetikler sizinkine dayalı olabilir (veya sizinki bunlara dayalı olabilir). Kodunuzun izinsiz kullanıldığını fark ederseniz, o komut dosyasının geri besleme sekmesinden bunu bildirin."
+    derivatives_script_html: "%{user}tarafından %{script}, lisans: %{license}%{diff_link:[Diff]}"
+    derivatives_exact_copies_heading: "Tam kopyalar"
+    derivatives_exact_copies_list_intro: "Aşağıdaki betikler, sizinkiyle tam olarak aynı koda sahiptir:"
+    derivatives_exact_copies_item_html: "%{author_links}tarafından %{script_link}-versions: %{version_list} "
+    derivatives_exact_copes_none: "Üzerinde bu betik %{site_name} tam olarak aynı koda sahip başka betik yok."
+    derivatives_similar_heading: "Benzer komut dosyaları"
+    derivatives_similar_info: "Sizinkine en çok benzeyenleri bulmak için diğer tüm komut dosyalarının en son sürümünü periyodik olarak kontrol ederiz. Ayrıca komut dosyanıza bir güncelleme gönderdiğinizde ve isteğiniz üzerine kontrol ederiz."
+    similarity_score:
+      high: Çok benzer
+      medium: Orta derecede benzer
+      low: Biraz benzerler
+      none: benzer değil
+    derivatives_similar_none: "Sizinkine benzer hiçbir komut dosyası yok."
+    derivatives_similar_last_check_html: "En son tarihinde %{date}sizinkine benzer komut dosyalarını kontrol ettik."
+    derivatives_similar_last_check_soon: "Kısa süre içinde sizinkine benzer komut dosyalarını kontrol edeceğiz."
+    derivatives_similar_last_check_again_soon_html: "En son tarihinde %{date}sizinkine benzer komut dosyalarını kontrol ettik. Kısa süre sonra tekrar kontrol edeceğiz."
+    derivatives_similar_check_now: "Şimdi tekrar kontrol edin"
     listing_title_all_sites: "Tüm siteler için üye scriptleri"
     listing_description_all_sites: "Tüm sitelerde özellikler ekleyen ve bugları kaldıran scriptler."
     listing_title_for_site: "%{site} için kullanıcı scriptleri"
@@ -138,6 +160,7 @@ tr:
     listing_filter_by_site_label: "Şunun için scriptler gösteriliyor:"
     listing_filter_by_site_disable: "Tümü"
     listing_filter_by_site_all_sites: "(Tüm siteler)"
+    listing_filter_by_language_label: "Dil:"
     listing_filter_by_site_more_sites: "Daha fazla.."
     listing_no_scripts: "Script bulunamadı."
     listing_created_feed: "Yeni scriptler"
@@ -145,8 +168,12 @@ tr:
     listing_none: "(Hiç)"
     listing_set_locale_filter: "Tüm dillerdeki sonuçlar gösteriliyor. %{set_filter_link:Yalnızca %{language}dilini göster}"
     listing_remove_locale_filter: "Yalnızca %{language}dili gösteriliyor. %{remove_filter_link:Tüm dillerdeki sonuçları göster.}"
+    listing_language_all: "Tümü"
+    listing_language_js: "JavaScript"
+    listing_language_css: "CSS"
     import: "Scriptleri içe aktar"
-    new: "Bir script gönder"
+    new: "Yazdığınız bir komut dosyasını yayınlayın"
+    new_css: "Yazdığınız bir stili yayınlayın"
     support_site: "Yazarın destek sitesini ziyaret et."
     support_email: "Destek için yazara e-posta gönder."
     contribution_no_amount: "%{author} yazarına bağış yaparak teşekkür et."
@@ -170,7 +197,7 @@ tr:
     upload_label: "Ya da yükle:"
     enable_source_code_editor_label: "Syntax-highlighting editörünü etkinleştir"
     changelog_note: "Bu versiyonda ne değişti?"
-    additional_info_note_html: "Scriptin hakkında bilgiler. %{allowed_elements_link}"
+    additional_info_note: "Daha ayrıntılı bir açıklama, talimatlar vb."
     post_new_script: "Script gönder"
     post_updated_script: "Yeni versiyon gönder"
     type_1_html: "Herkese açık kullanıcı scripti - herkesin görmesi ve kullanması için bir kullanıcı scripti ."
@@ -186,16 +213,21 @@ tr:
     warning_potentially_minified_html: "Senin script kodun küçültülmüş (kompreslenmiş) gibi görünüyor. Eğer küçültülmüş kütüphane kullanıyorsan, bunun yerine <code>@require</code> buradan %{allowed_requires_link}.  Scriptten küçültülmüş kodun çıkarılması gerekir."
     warning_automatic_sensitive_html: "Scriptiniz %{sensitive_domains}, bu yüzden yetişkin içeriği olarak işaretlenecek."
     warning_potentially_minified_allowed_requires_link: "bu yerlerden biri"
+    warning_code_previously_posted_html: "Bu kod daha önce postalanmış %{script_links}. Orijinal yazar dışındaki kişiler tarafından yeniden yayınlanan komut dosyaları, moderatörler tarafından kaldırılabilir."
     additional_info_locale_prompt: "(Bir yer seç)"
     additional_info_add_localized: "Yerel ek bilgi ekle"
     additional_info_locale_repeated: "'%{locale_code}' yeri için bir ek bilgi sağlayın."
     localized_additional_info_with_no_name: " '%{locale_code}' yeri için ek bilgi belirtildi, ancak @name:%{locale_code} sağlanmadı."
+    localized_attribute_matches_default: "Kod, varsayılan yerel ayardır %{meta_key}'%{locale_code}' olarak belirtilmemelidir."
     code_syncing_from_url_html: "Bu scriptin kodun senkronizasyonu şuraya ayarlanmış: %{field}"
     provide_code_syncing_from_url_html: "%{site_name}'a başka yerlerde barındırılan scriptleri aktarabilirsin, örnek olarak versiyon kontrol sisteminden (GitHub gibi), senin serverından, ya da başka user script hosting sitelerinden. Scriptlerinin senkronizasyonunu etkinleştirmek için ihtiyacını sağlayacak bir URL: %{field}"
     sync_type_intro: "Script senkronize olacak:"
-    sync_type_1: "Elle - sadece başlattığında güncellemeler kontrol edilecek."
-    sync_type_2: "Otomatik - periyodik olarak güncellemeler kontrol edilecek"
-    sync_type_3: "Webhook - deponuzdaki bu dosya üzerinde yaptığınız değişiklikleri gönderdiğinizde, o da güncellenecektir."
+    sync_type_1:
+      name: Manuel
+      description: yalnızca tetiklediğinizde güncellemeler kontrol edilecek.
+    sync_type_2:
+      name: Otomatik
+      description: güncellemeler periyodik olarak kontrol edilecek
     sync_failed_info_html: "Son senkronizasyon teşebbüsü %{date} oldu, %{error} ile sonuçlandı."
     sync_success_info_html: "Son başarılı senkronizasyon %{date} tarihinde yapıldı."
     sync_never_succeeded: "Hiç bir zaman başarılı senksonizasyon yapılmadı."
@@ -205,7 +237,6 @@ tr:
     additional_info_default_sync_html: "Varsayılan ek bilgi (<code>@name</code> ile eşleşmiş dil)"
     additional_info_localized_sync_html: "Sadece yerel (<code>@name:XX</code> ile eşleşmiş dil)"
     sync_url_placeholder: "(URL)"
-    screenshots_explanation: "En fazla %{number} adet ve her biri %{size} boyutundan küçük PNG, GIF, ya da JPEG resimler."
     screenshots_add: "Ekle:"
     screenshots_remove: "Kaldır"
     replacement_script_explanation: "(İsteğe bağlı) Bu script yerine başka bir script seçin. Kullanıcılar güncellediği zaman bu script buraya yönlendirilecek. Yerine gelecek scriptin URL'sini giriniz:"
@@ -225,13 +256,6 @@ tr:
     feedback_or_report: "%{feedback_link: Bir soru sorun, yorum yayınlayın} veya %{report_link: komut dosyasını bildirin}."
     support_feedback_or_report: "%{support_url: Destek için yazarın sitesini ziyaret edin}, %{feedback_link: bir soru sorun, yorum gönderin} veya %{report_link: komut dosyasını bildirin}."
     support_email_feedback_or_report: "%{support_url: Destek için yazara e-posta gönderin}, %{feedback_link: bir soru sorun, yorum gönderin} veya %{report_link: komut dosyasını bildirin}."
-    approve_redistribution_explanation: "%{site_name} diğer sitelere scriptinizi yeniden yayınlamalarına izin verdiğinizi söyler. Ancak buna scriptinizin lisansı tarafından zaten izin verilmiş veya verilmemiş olabilir."
-    approve_redistribution_use_user_setting: "Benim varsayılan hesap (%{user_setting})'ımı kullan"
-    approve_redistribution_use_user_setting_not_set: "ayarlanmamış"
-    approve_redistribution_true: "Scriptim başka yerlerde paylaşılabilir, benim için bir sakıncası yok"
-    approve_redistribution_false: "Scriptimin başka bir yerde paylaşılmasını istemiyorum."
-    redistributable_title: "Yeniden dağıtılabilir kullanıcı scriptleri"
-    redistributable_page_description: "Bu scriptlerin sahipleri, başka yerde yayınlanacağını onayladıklarını açıkça belirttiler. Bu scriptler yine de yeniden dağıtılması ile ilgili ek koşullara tabi olabilir; Ayrıntılar için her scriptin lisansını kontrol edin."
     adult_content: "Yetişkin içerik"
     adult_content_self_report: "Bu script içinde yetişkin içerikleri barındırıyor veya yetişkin içerik barındıran bir site için hazırlanmış."
     adult_content_self_report_explanation: "%{site_name} yetişkin içerikli scriptlere izin verir, ancak bunlar kullanıcıların görmek isteyip istemediklerini seçebileceği bir şekilde işaretlenmelidir. "
@@ -241,6 +265,9 @@ tr:
     adult_content_on_greasy_logged_in_error: "Bu script artık sizin geçerli %{edit_account_link:Greasy Fork account settings} üyeliğiniz için kullanılabilir değil."
     adult_content_on_greasy_not_logged_in_error: "Bu script artık kullanıcı girişi yapılmadan kullanılamaz. Lütfen {login_link:Log in} linkinden giriş yapın ve hesap ayarlarınızı kontrol edin"
     non_adult_content_on_sleazy: "Bu script bu sitede mevcut değil."
+    not_js_convertible_override_header: "JS'ye dönüşüm"
+    not_js_convertible_override_explanation: "%{site_name} otomatik olarak CSS'nizin %{help_link:user JS conversion} gerçekleştirebilir. Kullanıcı JS dönüşümü ve sizin kullanıcı CSS'niz farklı çalışacağından, kullanıcı JS dönüşümünü denemenizi öneririz. Eğer çalışmadığını görürseniz, aşağıdaki kutuyu seçerek onu geçersiz kılabilirsiniz."
+    not_js_convertible_override_label_html: "Bu, kullanıcı JS formatında erişilebilir <strong>olmamalı</strong>"
     adult_marker: "(Yetişkin)"
     deleted_marker: "(Silindi)"
     locked_marker: "(Kilitli)"
@@ -253,10 +280,7 @@ tr:
     search_placeholder: "Arama scriptleri"
     updated: "Betik güncellendi."
     preview_additional_info: "Önizle"
-    must_confirm_email: "Script'leri yayınlamadan önce e-posta adresinizi doğrulamalısınız."
     must_confirm_email_button: "%{email} adresine doğrulama e-postası yolla"
-    report:
-      title: "%{script_name}'yı şikayet et"
     authors_heading: "Yazarlar"
     invitations:
       form_title: "Diğer yazarları davet edin"
@@ -345,11 +369,6 @@ tr:
       all_sites: "Bütün siteler"
       user: "%{user} kullanıcısı tarafından oluşturulan scriptler"
       locale: "%{locale_name} içindeki scriptler"
-  forum_discussions:
-    listing_no_script_no_reply_html: "%{discussion_link} %{original_poster_link} tarafından %{original_post_date}"
-    listing_no_script_with_reply_html: "%{discussion_link} %{original_poster_link} tarafından %{original_post_date}, son yorum %{last_commenter_link} tarafından %{last_comment_date}"
-    listing_with_script_no_reply_html: "%{script_link}: %{discussion_link} %{original_poster_link} tarafından %{original_post_date}"
-    listing_with_script_with_reply_html: "%{script_link}: %{discussion_link} %{original_poster_link} tarafından %{original_post_date}, son yorum %{last_commenter_link} tarafından %{last_comment_date}"
   home:
     title: "%{site_name} - güvenli ve kullanışlı scriptler"
     welcome: "Hoşgeldin, %{site_name} bir kullanıcı scriptleri sitesidir."
@@ -361,35 +380,6 @@ tr:
     explain_user_scripts_html: "Kullanıcı scriptleri göz atma deneyiminizi kontrol etmenizi sağlar. Yüklendikten sonra, özellikler ekleyerek, onları daha kolay kullanmanızı sağlayarak veya rahatsız edici bitleri çıkartarak ziyaret ettiğiniz siteleri otomatik olarak daha iyi hale getirirler. %{site_name} alanındaki kullanıcı scriptler diğer kullanıcılar tarafından yazılmış ve dünyayla paylaşımda bulunmak için gönderilmiştir. Kurulumu kolay ve kullanımı kolaydır."
     installing_step1_header: "Adım 1: Bir kullanıcı script yöneticisi kur"
     installing_step1_caption: "Chrome için Tampermonkey "
-    installing_step1_description_html: >
-        <p>Bu kullanıcı scriptleri kullanılabilmek için öncelikle bir script yöneticisi
-        kurulması gerekiyor. Kullanabileceğiniz script yöneticisi kullandığınız tarayıcıya
-        bağlıdır.</p>
-
-        <ul>
-
-        <li>Chrome: %{chrome_tampermonkey_link:Tampermonkey}</a> veya %{chrome_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Firefox: %{firefox_greasemonkey_link:Greasemonkey}, %{firefox_tampermonkey_link:Tampermonkey},
-        veya %{firefox_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Safari: %{safari_tampermonkey_link:Tampermonkey}</li>
-
-        <li>Microsoft Edge: %{edge_tampermonkey_link:Tampermonkey}</li>
-
-        <li>Opera: %{opera_tampermonkey_link:Tampermonkey} veya %{opera_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Maxthon: %{maxthon_violentmonkey_link:Violentmonkey}</li>
-
-        <li>Dolphin: %{dolphin_tampermonkey_link:Tampermonkey}</li>
-
-        <li>UC: %{uc_tampermonkey_link:Tampermonkey}</li>
-
-        <li>Qupzilla: (ek bileşene ihtiyaç yoktur)</li>
-
-        <li>AdGuard: (ek bileşene ihtiyaç yoktur)</li>
-
-        </ul>
     installing_step2_header: "Adım 2: Bir kullanıcı skripti kur"
     installing_step2_caption: "Bir kullanıcı scriptinin yükleme düğmesi"
     installing_step3_header: "Adım 3: Kullanıcı scripti kullan"
@@ -455,7 +445,6 @@ tr:
       none: "Scriptlerin hakkındaki tartışmalardan e-postalar gönderme"
       discussion_only: "Scriptlerin hakkında tartışma gönderildiğinde e-posta gönder"
       discussion_and_comment: "Scriptlerine tartışma gönderildiğinde ya da tartışmalara yeni cevap yazıldığında e-posta gönder."
-      note: "Sen forumdaki diğer ayarlamalarından e-postaları alabilirsin."
     list_display_html:
       one: "%{user_link} - %{count} script"
       other: "%{user_link} - %{count} scriptler"
@@ -469,16 +458,12 @@ tr:
     show_ads_description: "%{site_name}'u reklamların görünmelerine izin vererek destekleyin"
     show_sensitive_description: "Yetişkin içerikli scriptleri göster"
     preferred_markup_description: "Yeni scriptler ve gönderiler için kullanılacak."
-    flattr_username_description_html: "Scriptlerinizin üyelerinden hesabınıza <a href=\"https://flattr.com\">Flattr</a> üzerinden bağış yapılması istenecektir."
-    approve_redistribution_true: "Scriptimin başka yerlerde gönderilmesinin benim için bir sakıncası yok"
-    approve_redistribution_false: "Scriptimin başka yerlerde gönderilmesini istemiyorum"
     greasy_fork_scripts_link:
       one: "%{user_name}'nin ayrıca Greasy Fork'da %{count} scripti var."
       other: "%{user_name}'nin ayrıca Greasy Fork'da %{count} scripti var."
     delete_link: "Hesap Sil"
     delete:
       intro: "Sizin %{site_name}, %{user_name}hesap silmeniz şu sonuçlara sebep olur:"
-      requires_permanent_deletion: "Hesabınızı silmeden önce, şu scriptlerin kalıcı olarak silinmesini talep etmelisiniz:"
       password_effect: "Şifrenizle girişiniz artık mümkün olmayacak."
       scripts_effect:
         one: "Size ait %{count} script silinecek."
@@ -501,6 +486,8 @@ tr:
         request_expired: "Kullanıcı silinemedi - talep süresi geçti."
         cancelled: "Silme işlemi iptal edildi."
         completed: "Hesap silindi."
+    notifications:
+      title: Bildirimler
   help:
     installing_user_scripts:
       title: 'Kullanıcı scriptleri nasıl yüklenir?'
@@ -509,7 +496,6 @@ tr:
       intro_html: "Bu, %{site_name} sitesinin okuyacağı bir <a href=\"http://wiki.greasespot.net/Metadata_Block\">kullanıcı betiği meta anahtarları </a> listesi. Bu listenin dışındaki anahtarlar, betiğe eklenmiş olabilir, ve yüklenmiş betikte bulunabilir, fakat %{site_name}sitesinin Kullanıcı Arayüzü'nde bulunmayabilir."
       name: "Scriptin ismi, başlıkta ve linklerde kullanılacak. Gerekli."
       description: "Script ne işe yarıyor açıklaması. Başlık altında gösterilecektir. Gerekli."
-      include: "Scriptin hangi sayfalarda çalışacağını tanımlayın. Bu liste işlenip scriptin bilgi sayfasında görüntülenecek ve scriptleri kategorize etmekte kullanılacaktır."
       require_html: "Kodlar harici Java kodları içermektedir. Bakınız %{external_script_link}."
       require_external_script_link_text: "kod kuralları harici komut içermektedir"
       supportURL: "Kullanıcıların bir komut dosyasında destek alabileceği bir sayfanın URL'si (ör. Bir hata izleyici, bir forum, bir e-posta adresi). Destek URL'si bir komut dosyasının geribildirim sayfasında görüntülenir."
@@ -521,7 +507,6 @@ tr:
       post_new_script_link_text: 'yeni script gönder'
     code_rules:
       title: "Gönderilmiş scriptler için %{site_name}'un kuralları"
-      adult_content_rule_html: "<li>Yetişkin içerik barındıran scriptler bu şekilde işaretlenmelidir. Böylece kullancılar ne göreceklerini seçebilirler.</li>"
     external_scripts:
       title: "%{site_name} sitesinin harici scriptlerdeki politikası"
     script_rewriting:
@@ -532,7 +517,6 @@ tr:
       authors_credit: "%{site_name} kod destekçileri olmadan var olamazdı."
       developers_credit: "%{site_name} scripti %{developers_link:these people}  tarafından bütün hata raporu gönderenm ve önerilen veren insanların yardımıyla yazılmıştır."
       translators_credit: "Grasy Fork, %{translators_link:Transifex çeviri sayfasından}: çevrilmiştr."
-      icons_credit: "Tartışma ikonları %{iconsland} tarafından yapılmıştır ve %{vistastylebase}'da bulunmaktadır. Tarayıcı ikonları %{browserlogos}'da bulunmaktadır."
     help_with_greasymonkey: "Greasemonkey'de yardım"
     contact:
       title: "Birileriyle iletişime geçin"
@@ -578,9 +562,6 @@ tr:
     code_search:
       title: "Kod Ara"
       description: "Script kod ara. Joker karakter olmaksızın düz metin araması, BÜYÜK/küçük harfe duyarsızdır."
-    forum_search:
-      title: "Forum Araması"
-      description: "Forumda tartışma ve yorumları ara.  %{fulltext_link:MySQL yerel dil araması.}"
     user_search:
       title: "Kullanıcı araması"
       description: "Kullanıcıları isimleriyle arayın. Düz yazı gibi arayın."
@@ -593,6 +574,45 @@ tr:
     item_script_html: "Script: %{script_link}"
     item_deleted_script: "Silinmiş script %{id}"
     item_user_html: "Kullanıcı: %{user_link}"
+  reports:
+    new_report_title:
+      user: "Raporla"
+      comment: "%{user}tarafından yapılan yorumu raporla"
+    create_button: "Rapor oluştur"
+    report_user: "Kullanıcı raporla"
+    report_comment: "Yorum raporla"
+    report_message: "Mesaj raporla"
+    result_dismissed: "Bu rapor moderatör tarafından reddedildi."
+    result_upheld: "Bu rapor moderatör tarafından onaylanmıştı"
+    result_pending: "Bu rapor moderatör tarafından incelenmeyi bekliyor."
+  discussions:
+    comment_date: "Gönderildi: %{date}"
+    comment_edit_date: "Düzenlendi: %{date}"
+    edit_comment_link: "Düzenle"
+    edit_comment_header: "Yorumu düzenle"
+    delete_comment: "Sil"
+    delete_discussion: "Sil"
+    update_comment_submit: "Yorumu güncelle"
+    cancel_update_comment: "İptal"
+    ratings_short:
+      ok: "Tamam"
+    user_filter:
+      subscribed: "Takip edildi"
+    category_filter:
+      label: Kategori
+    read_filter:
+      all: Tümü
+    user_activity:
+      title: "Son yorumlar"
+    subscribe: Takip et
+    unsubscribe: Takibi bırak
+  conversations:
+    send_message: Mesaj gönder
+    conversation_list_title: Konuşamalar
+    no_conversations: Henüz hiç konuşmanız yok.
+    recent:
+      title: Son konuşmalar
+      more: Tüm konuşmaları göster
   common:
     error_preamble: "Ne gönderdiğinizde bazı sorunlar oldu.."
     allowed_elements_link: "(İzin verilen kodları gör.)"
@@ -620,7 +640,6 @@ tr:
         show_ads: "Reklamları göster"
         show_sensitive: "Yetişkin içerik"
         preferred_markup: "Tercih biçimlendir"
-        flattr_username: "Flattr kullanıcı adı"
       script:
         name: "İsim"
         description: "Açıklama"
@@ -630,13 +649,20 @@ tr:
         type: "Script tipi"
         additional_info: "Ek bilgi"
         screenshots: "Ekran görüntüleri"
-        screenshot_caption: "Başlık"
         replaced_by_script_id: "Değiştirilmiş script"
-        approve_redistribution: "Yeniden dağıtım"
       script_set:
         name: "İsim"
         description: "Açıklama"
         default_sort: "Varsayılan sıralama"
+      report:
+        reason: "Raporlama sebebi"
+      discussion:
+        category: "Kategori"
+        title: Başlık
+      conversation:
+        user_input: Kullanıcı
+      message:
+        content: Mesaj
   errors:
     messages:
       script_missing_name: "Gerekli - Bir @isim belirle"
@@ -651,6 +677,7 @@ tr:
       script_update_not_utf8: "yüklenen UTF-8 biçiminde olmalıdır"
       script_disallowed_require: "onaylanmamış harici script kullanıyor: %{code}"
       script_rate_limit: "Yayınlama sınırını geçtiniz. Daha sonra tekrar deneyin."
+      file_size_out_of_range: "boyut 200KB'den düşük olmak zorundadır"
   opensearch:
     short_name: "%{site_name} ara"
     description: "%{site_name} sitesinde kullanıcı scriptleri için ara."

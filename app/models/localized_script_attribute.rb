@@ -1,20 +1,22 @@
 class LocalizedScriptAttribute < ApplicationRecord
+  self.ignored_columns = ['sync_source_id']
 
-	belongs_to :script
-	belongs_to :locale
+  include MentionsUsers
 
-	strip_attributes :only => [:attribute_key, :attribute_value]
+  belongs_to :script
+  belongs_to :locale
 
-	validates_presence_of :attribute_key, :attribute_value, :locale, :value_markup
+  strip_attributes only: [:attribute_key, :attribute_value]
 
-	validates_format_of :sync_identifier, :with => URI::regexp(%w(http https)), :message => :script_sync_identifier_bad_protocol, :if => Proc.new {|r| r.sync_source_id == 1}
+  validates :attribute_key, :attribute_value, :locale, :value_markup, presence: true
 
-	def localized_meta_key
-		return LocalizedScriptAttribute.localized_meta_key(attribute_key, locale, attribute_default)
-	end
+  validates :sync_identifier, format: { with: URI::DEFAULT_PARSER.make_regexp(%w[http https]), message: :script_sync_identifier_bad_protocol }, allow_nil: true, unless: -> { Rails.env.test? }
 
-	def self.localized_meta_key(attr, locale, attribute_default)
-		return '@' + attr.to_s + ((attribute_default || locale.nil?) ? '' : ':' + locale.code)
-	end
-	
+  def localized_meta_key
+    return LocalizedScriptAttribute.localized_meta_key(attribute_key, locale, attribute_default)
+  end
+
+  def self.localized_meta_key(attr, locale, attribute_default)
+    return "@#{attr}#{(attribute_default || locale.nil?) ? '' : ":#{locale.code}"}"
+  end
 end
